@@ -1,0 +1,140 @@
+configuration{
+  display-drun: "Run:";
+  drun-display-format: "{icon} {name}";
+  font: "Google Sans Regular 13";
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Paper";
+}
+@theme "/dev/null"
+
+
+
+mainbox {
+  background-color: @0D0D0D00;
+  children: [inputbar, listview];
+  padding: 0;
+  border-radius: 20px;
+  border: 2px;
+  border-color: #ebdbb2;
+}
+
+
+* {
+  bg:  #1d2021;
+  bg2: #ebdbb2;
+  bg3: #282828;
+  bg4: #b8bb26;
+  highlight: #b8bb26;
+  fg: #ebdbb2;
+  fg2: #1d2021;
+  background-color: @bg;
+  textcolor: #ffffff;
+  border: 0;
+  margin: 0;
+  padding: 10;
+  spacing: 0;
+  
+}
+
+window {
+  location: center;
+  width: 30%;
+  height: 85%;
+  background-color: #0D0D0D00;
+  
+}
+
+element {
+  padding: 0 0;
+  text-color: @fg;
+  background-color: @bg;
+  
+}
+
+element-text {
+  background-color: inherit;
+  text-color: @fg;
+  vertical-align: 0.5;
+  border-radius: 0px;
+}
+
+element-icon selected{
+  background-color: @bg2;
+  border-radius: 8px 0px 0px 8px;
+}
+
+element-text selected {
+  background-color: @bg2;
+  color: @fg2;
+  border-radius: 0px 8px 8px 0px;
+  
+  
+}
+
+highlight {
+  color: @bg4;
+}
+
+listview {
+  background-color: @bg;
+  border-radius: 0px;
+  
+  margin: 10px;
+  color: @fg;
+  columns: 1;
+  padding: 7;
+}
+
+element-icon {
+  size: 25;
+  padding: 5px ;
+}
+
+element selected {
+  background-color: @bg;
+  
+  margin: 0px;
+
+}
+
+inputbar {
+  children: [prompt,textbox-prompt-colon, entry];
+  padding: 30px 40px 10px 30px;
+  border: 0 0 0px 0;
+  border-color: @bg2;
+  background-color: @bg;
+  margin: 0px 0 20px 0;
+}
+
+prompt {
+  text-color: @fg;
+  background-color: @bg3;
+  margin: 0px 10px 0px 0px;
+  border-radius: 20px;
+  padding: 10px 15px 5px 15px;
+  enabled: false;
+  
+}
+
+textbox-prompt-colon {
+  font: "Font Awesome 13";
+  expand: false;
+  padding: 1% 10px 0% 1%;
+  margin: 0% 1% 0% 0%;
+  text-color: @bg;
+  background-color: @fg;
+  border-radius: 8px;
+  border: 2px;
+  border-color: @fg;
+  str: " ";
+}
+
+entry {
+  placeholder: "Search";
+  text-color: @fg;
+  background-color: @bg3;
+  border-radius: 8px;
+  border-color: @fg;
+  
+}
