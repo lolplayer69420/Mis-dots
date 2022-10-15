@@ -1,0 +1,84 @@
+configuration {
+    location:                       0;
+    font:                           "Font Awesome 6 Free:style=regular";
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  background: #1d2021;
+  background-alt: #6C7DD9;  
+  line: #ebdbb2; 
+  foreground: #ebdbb2;  
+  foreground-alt: #ebdbb2;  
+  Comment: #cc241d; 
+  selected: #0D0D0D;
+  Pink: #ff79c6;    
+  Purple: #bd93f9;
+  background-color: @background;
+  text-color: @purple;
+}
+ 
+ 
+window {
+    location: north east;
+    background-color:               @background;
+    width:                          12%;   
+    height:                         60%;          
+    x-offset:   -16px;        
+    y-offset:   60px;
+    border-radius: 20px;
+    border: 2px;
+    border-color: #ebdbb2;
+}
+ 
+listview {
+    background-color:               @background;
+    columns:                        1;
+    lines:                          1;
+    spacing:                        50px;
+    layout:                         vertical;
+}
+ 
+mainbox {
+    background-color:               @background;
+    children:                       [ listview ];
+    padding:                        40px;
+}
+ 
+element {
+    background-color:               @background;
+    text-color:                     @line;
+    orientation:                    horizontal;
+    /*border-radius:                  100%;*/
+    /*padding:                        8px 32px 8px 32px;*/
+}
+ 
+element-text {
+    background-color:               inherit;
+    text-color:                     @line;
+    font:                           "Font Awesome 6 Free Regular 30";
+    expand:                         false;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px;
+}
+
+element-text selected {
+    background-color:               inherit;
+    text-color:                     @Comment;
+    font:                           "Font Awesome 6 Free Regular 30";
+    expand:                         false;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px;
+}
+
+element selected {
+    background-color:               @background;
+    text-color:                     @line;
+    padding:                        8px;
+    
+}
